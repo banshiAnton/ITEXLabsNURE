@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+            html {
+                height: 100%;
+            }
+            body {
+                height: 100%;
+                background-color: aqua;
+                margin: 0;
+            }
+            .main {
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+            .column {
+                margin: 0.5%;
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            .column-item {
+                width: 100%;
+                background-color: blue;
+                height: 100%;
+            }
+            .mid {
+                margin: 15px 0;
+                background-color: transparent;
+            }
+            .mid-big {
+                padding-top: 15px;
+                margin: 0 0 15px 0;
+                background-color: blue;
+            }
+            ul {
+                padding: 10px;
+                display: inline-block;
+                border: 5px solid rgba(255, 0, 0, 0.5);
+                list-style: none;
+                font-size: 3em;
+                font-family: cursive;
+            }
+            li::before {
+                content: '∫';
+                padding-right: 0.3em;
+            }
+            .list {
+                text-align: center;
+            }
+    </style>
+</head>
+<body>
+    <div class="list">
+        <ul>
+            <li>List Item 1</li>
+            <li>List Item 2</li>
+            <li>List Item 3</li>
+            <li>List Item 4</li>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="column">
+            <div class="column-item"></div>
+            <div class="column-item mid"></div>
+            <div class="column-item"></div>
+        </div>
+        <div class="column">
+            <div class="column-item"></div>
+            <div class="column-item mid mid-big "></div>
+            <div class="column-item"></div>
+        </div>
+        <div class="column">
+            <div class="column-item"></div>
+            <div class="column-item mid"></div>
+            <div class="column-item"></div>
+        </div>
+    </div>
+</body>
+</html>
