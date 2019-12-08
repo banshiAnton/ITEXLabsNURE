@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <img id="image" alt="image">
+    <script>
+        let html = document.querySelector('html')
+        let image = document.getElementById('image')
+
+        let index = -1
+
+        let urls = [
+            'https://cdn.motor1.com/images/mgl/Bo0Qj/s3/2021-new-lead.jpg',
+            'http://i1.ytimg.com/vi/GcUCJxd7Ymo/maxresdefault.jpg',
+            'https://i.ytimg.com/vi/SE3gXRKBNHc/maxresdefault.jpg',
+            'https://delo.ua/files/news/images/3610/17/picture2_tesla-poluchila-b_361017_p0.jpg'
+        ]
+
+        let colors = ['rgb(255, 0, 0)', 'rgb(0, 255, 0)']
+
+        function newCar() {
+            index++
+            if (index === urls.length) {
+                index = 0
+            }
+            newImage(urls[index])
+        }
+
+        function newImage(url) {
+            image.src = url
+        }
+
+        newCar()
+
+        setInterval(newCar, 1000)
+
+        function bg_color() {
+            let date = new Date()
+            let index = date.getMinutes() % 2
+            html.style.backgroundColor = colors[index]
+        }
+
+        bg_color()
+
+    </script>
+</body>
+</html>
