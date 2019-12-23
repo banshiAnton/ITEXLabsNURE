@@ -1,1 +1,0 @@
-<p><strong>Name = <? echo htmlspecialchars($_COOKIE["user_name"]);?></strong></p>
